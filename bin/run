@@ -8,5 +8,9 @@ song = Song.new(name: "Hello", album: "25")
 puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
+song1 = Song.new(name: "Check1", album: "Text here")
+song1.save
+song2 = Song.new(name: "DROP TABLE songs", album: "Text here")
+song2.save
 
 DB[:conn].execute("SELECT * FROM songs")
